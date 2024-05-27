@@ -1,0 +1,28 @@
+Pruebas sign up: 
+    Exitoso:
+        Cuando se realizó un registro exitoso la API respondió un estatus code 200 y un body de respuesta un string vacío
+        En este caso considero que la API debería arrojar un estatus code 204 ya que no retorna ninguna respuesta útil al usuario.
+    Usuario existente:
+        Cuando se ejecutó la API respondió un estatus 200 y un body de respuesta json con un objeto error message, el cual especificaba el error.
+        En este caso considero que la API debería arrojar un error a nivel de cliente, específicamente un estatus code 409 que indica un problema
+        al crear un cliente ya existente.
+    Conclusión final:
+        Esta API se encuentra mal diseñada debido a que las respuestas enviadas no se encuentran homologadas según el estándar
+        Esta API no envía los errores correctos hacia el cliente.
+
+Pruebas login:
+    Exitoso:
+        Cuando se ejecutó la API de manera exitosa respondió un estatus code 200 y un body de respuesta un string el cual
+        contenía el auth token para consumir el resto de APIs.
+        En este caso se considera que la API debería arrojar el auth token como respuesta json y no string, además de presentar 
+        más información como el tiempo de expiración del token.
+    Contraseña incorrecta
+        Cuando se ejecutó la API de manera exitosa respondió un estatus code 200 y un body de respuesta json el que tenía un objeto 
+        de error message con el mensaje de error respectivo.
+        En este caso se considera que la API debería enviar un error a nivel de cliente, exactamente un error 401 ya que
+        las credenciales ingresadas fueron incorrectas.
+    Conclusión final:
+        Esta API se encuentra mal diseñada debido a que las respuestas enviadas no se encuentran homologadas según el estándar
+        Esta API no envía los errores correctos hacia el cliente.
+        Existe un riesgo de seguridad debido a que en ingresos existosos, envía siempre el mismo token.
+        

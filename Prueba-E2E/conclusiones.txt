@@ -1,0 +1,10 @@
+El sitio http://opencart.abstracta.us/, no es un sitio seguro debido a que en el protocolo HTTP, 
+envía solicitudes y respuestas en texto plano, lo que significa que cualquiera puede leerlas.
+El flujo de compra en la página http://opencart.abstracta.us/ fue exitoso.
+Se identificó una novedad con relación a la validación de stock de los productos, a pesar que se emite el mensaje
+que no están disponibles en la cantidad deseada o no están en stock, permite continuar con la compra.
+La navegación durante el proceso de compra no presentó inconvenientes.
+Los campos marcados como obligatorios en el checkout se validaron sin inconvenientes.
+Los impuestos que aplican al país EEUU (Eco Tax y VAT) no aplican para otros países como Ecuador.
+A finalizar la compra como invitado, el mensaje de confirmación "Your order has been placed!" se presentó correctamente, 
+concluyendo así el flujo.
